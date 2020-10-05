@@ -1,0 +1,16 @@
+.simple-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.simple-post__thumbnail {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 100px;
+}
+
+.simple-post__title {
+    margin-left: 1rem;
+}
