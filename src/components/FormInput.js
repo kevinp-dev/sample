@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './FormInput.css';
 
+// TODO: tests
 function FormInput(props) {
     return (
         <div className="form-input">

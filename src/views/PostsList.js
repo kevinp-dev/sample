@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SimplePost from '../components/SimplePost'
 import FormInput from '../components/FormInput'
 
+// TODO: tests
 // Renders a list of each post's title and thumbnail
 function PostsList({ posts }) {
 

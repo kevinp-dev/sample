@@ -25,7 +25,6 @@ function App() {
 
         return (
           <div className="view-container">
-            {/* TODO: Navigation here */}
             <h1>{ `/r/${subreddit} Browser` }</h1>
             <Switch>
               <Route exact path="/">

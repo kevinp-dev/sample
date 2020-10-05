@@ -4,6 +4,7 @@ import { massageResponse } from '../utils/formatters'
 import { REDDIT_URL } from '../config'
 import PropTypes from 'prop-types';
 
+// TODO: tests
 // fetches JSON data for a given subreddit's posts
 class PostsFetcher extends React.Component {
     constructor(props) {
