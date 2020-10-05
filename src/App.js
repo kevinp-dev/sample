@@ -5,11 +5,12 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
-import PicsList from './views/PostsList';
-import Pic from './views/PostDetailed';
+import PostsList from './views/PostsList';
+import PostDetailed from './views/PostDetailed';
 import PostsFetcher from './containers/PostsFetcher';
 import Message from './components/Message';
-import './App.css'; // CSS will change
+import { ROUTES } from './config';
+import './App.css';
 
 function App() {
   const subreddit = 'pics';
@@ -25,16 +26,23 @@ function App() {
         return (
           <div className="view-container">
             {/* TODO: Navigation here */}
+            <h1>{ `/r/${subreddit} Browser` }</h1>
             <Switch>
               <Route exact path="/">
-                <Redirect to="/posts" />
+                <Redirect to={ `/${ROUTES.POSTS}` } />
               </Route>
-              <Route exact path="/posts">
-                <PicsList subreddit={subreddit} posts={posts} />
+              <Route exact path={ `/${ROUTES.POSTS}` }>
+                <PostsList posts={posts} />
               </Route>
-              <Route path="/posts/:postId">
-                <Pic />
-              </Route>
+              <Route path={ `/${ROUTES.POSTS}/:postId` }
+                render={({ match }) => {
+                  const postId = match?.params?.postId;
+                  const post = posts.find(post => post.id === postId);
+                  return post 
+                    ? <PostDetailed post={post} />
+                    : <Redirect to={ `/${ROUTES.POSTS}` } />
+                }}
+              />
             </Switch>
           </div>
         );
