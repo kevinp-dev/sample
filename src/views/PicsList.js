@@ -1,9 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function PicList() {
+// Renders a list of each post's title and thumbnail
+function PicList({ posts }) {
     return (
-        <p>PicList View</p>
+        <ul>
+            {posts.map(post => (
+                <li>{`${post.title}`}</li>
+            ))}
+        </ul>
     )
+}
+
+PicList.propTypes = {
+    posts: PropTypes.array.isRequired
 }
 
 export default PicList;

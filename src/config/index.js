@@ -1,0 +1,1 @@
+export const REDDIT_URL = 'http://www.reddit.com'
