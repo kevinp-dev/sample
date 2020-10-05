@@ -1,0 +1,8 @@
+.form-input {
+    display: flex;
+    align-items: center;
+}
+
+.form-input__field {
+    margin-left: 0.5rem;
+}
