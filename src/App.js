@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import PicsList from './views/PostsList';
 import Pic from './views/PostDetailed';
-import PostsFetcher from './components/PostsFetcher';
+import PostsFetcher from './containers/PostsFetcher';
 import Message from './components/Message';
 import './App.css'; // CSS will change
 
